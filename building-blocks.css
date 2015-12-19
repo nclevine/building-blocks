@@ -31,31 +31,30 @@ html, body, .sandbox {
   transform-origin: center bottom; }
 
 .x-face {
-  background-color: red; }
+  background-color: #FF4136; }
   .x-face.triangle {
     background-color: transparent;
-    border-color: transparent transparent red transparent; }
+    border-color: transparent transparent #FF4136 transparent; }
 
 .y-face {
-  background-color: blue; }
+  background-color: #0074D9; }
 
 .z-face {
-  background-color: yellow; }
+  background-color: #FFDC00; }
   .z-face.triangle {
     background-color: transparent;
-    border-color: transparent transparent yellow transparent; }
+    border-color: transparent transparent #FFDC00 transparent; }
 
 .test {
   perspective: 500px;
   top: 70%;
   left: 70%; }
 
-.test-rotate {
-  transform: rotateX(45deg);
-  transform-origin: center bottom;
-  width: 100px;
-  height: 100px;
-  background-color: green; }
+.test-inner {
+  width: 200px;
+  border-style: solid;
+  border-color: transparent transparent #2ECC40 transparent;
+  border-width: 0 50px 100px 50px; }
 
 @keyframes spin {
   100% {

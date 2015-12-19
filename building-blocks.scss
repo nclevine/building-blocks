@@ -1,6 +1,7 @@
-$xColor: red;
-$yColor: blue;
-$zColor: yellow;
+$red: #FF4136;
+$blue: #0074D9;
+$yellow: #FFDC00;
+$green: #2ECC40;
 
 * {
 	box-sizing: border-box;
@@ -38,24 +39,24 @@ html, body, .sandbox {
 	transform-origin: center bottom;
 }
 .x-face {
-	background-color: $xColor;
+	background-color: $red;
 	&.triangle {
 		background-color: transparent;
-		border-color: transparent transparent $xColor transparent;
+		border-color: transparent transparent $red transparent;
 	}
 }
 .y-face {
-	background-color: $yColor;
+	background-color: $blue;
 	// &.triangle {
 	// 	background-color: transparent;
-	// 	border-color: transparent transparent $yColor transparent;
+	// 	border-color: transparent transparent $blue transparent;
 	// }
 }
 .z-face {
-	background-color: $zColor;
+	background-color: $yellow;
 	&.triangle {
 		background-color: transparent;
-		border-color: transparent transparent $zColor transparent
+		border-color: transparent transparent $yellow transparent
 	}
 }
 .test {
@@ -63,16 +64,19 @@ html, body, .sandbox {
 	top: 70%;
 	left: 70%
 }
-.test-rotate {
-	transform: rotateX(45deg);
-	transform-origin: center bottom;
-	width: 100px;
-	height: 100px;
-	background-color: green;
+.test-inner {
+	// transform: rotateX(45deg);
+	// transform-origin: center bottom;
+	width: 200px;
+	// height: 100px;
+	// background-color: $green;
+	border-style: solid;
+	border-color: transparent transparent $green transparent;
+	border-width: 0 50px 100px 50px;
 }
 @keyframes spin {
 	100% { transform: rotateY(405deg) rotateX(375deg); }
 }
 @keyframes pyramidSpin {
-	100% { transform: rotateY(390deg) rotateX(15deg) }
+	100% { transform: rotateY(390deg) rotateX(15deg); }
 }

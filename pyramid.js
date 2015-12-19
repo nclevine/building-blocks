@@ -36,9 +36,8 @@ function Pyramid (config) {
 		'left': widthDepthDiff < 0 ? (widthDepthDiff / -2) : 0,
 		'width': config.width,
 		'height': config.depth,
-		'transform': 'rotateX(90deg) translateZ(' + ((config.height - (config.depth / 2)) * -1) + 'px)'
+		'transform': 'rotateX(90deg) translateZ(' + ((config.height - (config.depth / 2) - 1) * -1) + 'px)'
 	});
-	container
 	container.append(xFace, xFace2, zFace, zFace2, yFace);
 	sandbox.append(container);
 }
