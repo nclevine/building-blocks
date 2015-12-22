@@ -21,16 +21,38 @@ html, body, .sandbox {
 	top: 60%;
 	left: 60%;
 	transform: rotateY(45deg) rotateX(15deg);
-	animation: spin 3s infinite;
+	animation: boxSpin 3s infinite;
 }
 .pyramid-container {
 	top: 30%;
-	left: 30%;
+	left: 15%;
 	transform: rotateY(30deg) rotateX(15deg);
 	animation: pyramidSpin 3s infinite;
 }
+.cylinder-container {
+	top: 20%;
+	left: 70%;
+	transform: rotateY(40deg) rotateX(15deg);
+	animation: cylinderSpin 3s infinite;
+}
 .face {
 	// border: 1px solid rgba(0,255,0,1);
+}
+.cylinder-base {
+	background-color: $blue;
+	border-color: $blue;
+	border-radius: 50%;
+	&.ring {
+		background-color: transparent;
+	}
+}
+.cylinder-segment {
+	// display: none;
+	background-color: $red;
+	&.inner {
+		// display: block;
+		background-color: $yellow;
+	}
 }
 .triangle {
 	width: 0;
@@ -74,9 +96,12 @@ html, body, .sandbox {
 	border-color: transparent transparent $green transparent;
 	border-width: 0 50px 100px 50px;
 }
-@keyframes spin {
+@keyframes boxSpin {
 	100% { transform: rotateY(405deg) rotateX(375deg); }
 }
 @keyframes pyramidSpin {
-	100% { transform: rotateY(390deg) rotateX(15deg); }
+	100% { transform: rotateY(390deg) rotateX(375deg); }
+}
+@keyframes cylinderSpin {
+	100% { transform: rotateY(400deg) rotateX(375deg); }
 }
