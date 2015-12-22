@@ -1,10 +1,7 @@
-var sandbox = $('.sandbox');
-var sampleConfig = {
-	width: 275,
-	height: 400,
-	depth: 325
-}
-function Pyramid (config) {
+function Pyramid (config, parentSelector) {
+
+	var parent = $(parentSelector);
+
 	var xFaceHeight = Math.sqrt(Math.pow((config.width / 2), 2) + Math.pow(config.height, 2)),
 		xFaceHeightDiff = xFaceHeight - config.height,
 		xFaceAngle = (Math.PI / 2) - Math.atan(2 * config.height / config.width),
@@ -39,8 +36,8 @@ function Pyramid (config) {
 		zFace2 = zFace.clone().css({
 			'transform': 'rotateX(' + (zFaceAngle * -1) + 'rad) translateY(' + zFaceHeightDiff + 'px) translateZ(' + (config.depth / -2) + 'px)'
 		});
-	container.append(xFace, xFace2, zFace, zFace2, yFace);
-	sandbox.append(container);
-}
 
-var samplePyramid = new Pyramid(sampleConfig);
+	container.append(xFace, xFace2, zFace, zFace2, yFace);
+	
+	parent.append(container);
+}

@@ -1,11 +1,7 @@
-var sandbox = $('.sandbox');
-var sampleConfig = {
-	width: 250,
-	height: 200,
-	depth: 150,
-	color: 'rgba(40,200,200,0.3)'
-};
-function Box (config) {
+function Box (config, parentSelector) {
+
+	var parent = $(parentSelector);
+
 	var container = $('<div class="box-container"></div>')
 		xFace = $('<div class="face x-face"></div>').css({
 			'width': config.depth,
@@ -31,7 +27,8 @@ function Box (config) {
 			'transform': 'translateZ(' + (config.depth / 2) + 'px)'
 		}),
 		zFace2 = zFace.clone().css({ 'transform': 'translateZ(' + (config.depth / -2) + 'px)' });
+	
 	container.append(xFace, xFace2, yFace, yFace2, zFace, zFace2);
-	sandbox.append(container);
+	
+	parent.append(container);
 }
-var sampleBox = new Box(sampleConfig);

@@ -1,11 +1,6 @@
-var sandbox = $('.sandbox');
-var sampleConfig = {
-	radius: 200,
-	height: 50,
-	resolution: 1,
-	thickness: 30
-};
-function Cylinder (config) {
+function Cylinder (config, parentSelector) {
+
+	var parent = $(parentSelector);
 
 	var numFaces = parseInt(config.radius / config.resolution),
 		faceWidth = 2 * Math.PI * config.radius / numFaces,
@@ -35,6 +30,7 @@ function Cylinder (config) {
 		});
 
 	container.append(base, base2);
+
 	for (var i = 0; i < numFaces; i++) {
 		var faceSegment = $('<div class="cylinder-segment"></div>'),
 			angle = angleInterval * i;
@@ -47,6 +43,7 @@ function Cylinder (config) {
 		});
 		container.append(faceSegment);
 	};
+
 	if (config.thickness) {
 		for (var i = 0; i < numFacesInner; i++) {
 			var faceSegment = $('<div class="cylinder-segment inner"></div>'),
@@ -61,6 +58,6 @@ function Cylinder (config) {
 			container.append(faceSegment);
 		};
 	}
-	sandbox.append(container);
+	
+	parent.append(container);
 }
-var sampleCylinder = new Cylinder(sampleConfig);
