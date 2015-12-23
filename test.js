@@ -7,7 +7,7 @@ var boxConfig = {
 	color: 'rgba(40,200,200,0.3)'
 };
 
-var box = new Box(boxConfig, parentSelector);
+// var box = new Box(boxConfig, parentSelector);
 
 var pyrConfig = {
 	width: 275,
@@ -15,7 +15,7 @@ var pyrConfig = {
 	depth: 325
 };
 
-var pyramid = new Pyramid(pyrConfig, parentSelector);
+// var pyramid = new Pyramid(pyrConfig, parentSelector);
 
 var cylConfig = {
 	radius: 200,
@@ -24,4 +24,11 @@ var cylConfig = {
 	thickness: 30
 };
 
-var cylinder = new Cylinder(cylConfig, parentSelector);
+// var cylinder = new Cylinder(cylConfig, parentSelector);
+
+var sphereConfig = {
+	radius: 100,
+	resolution: 1
+};
+
+var sphere = new Sphere(sphereConfig, parentSelector);

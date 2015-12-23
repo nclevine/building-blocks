@@ -9,9 +9,6 @@ html, body, .sandbox {
   width: 100%;
   height: 100%; }
 
-.sandbox {
-  /*perspective: 500px;*/ }
-
 .box-container {
   top: 60%;
   left: 60%;
@@ -29,6 +26,14 @@ html, body, .sandbox {
   left: 70%;
   transform: rotateY(40deg) rotateX(15deg);
   animation: cylinderSpin 3s infinite; }
+
+.sphere-container {
+  top: 45%;
+  left: 45%;
+  transform: rotateX(45deg); }
+
+.sphere-face {
+  background-color: rgba(46, 204, 64, 0.3); }
 
 .cylinder-base {
   background-color: #0074D9;
@@ -74,6 +79,9 @@ html, body, .sandbox {
   border-color: transparent transparent #2ECC40 transparent;
   border-width: 0 50px 100px 50px; }
 
+@keyframes spin {
+  100% {
+    transform: rotateY(360deg); } }
 @keyframes boxSpin {
   100% {
     transform: rotateY(405deg) rotateX(375deg); } }
@@ -83,5 +91,12 @@ html, body, .sandbox {
 @keyframes cylinderSpin {
   100% {
     transform: rotateY(400deg) rotateX(375deg); } }
+@keyframes pulse {
+  0% {
+    transform: scale(1) rotateY(45deg) rotateX(15deg); }
+  50% {
+    transform: scale(1.4) rotateY(45deg) rotateX(15deg); }
+  100% {
+    transform: scale(1) rotateY(45deg) rotateX(15deg); } }
 
 /*# sourceMappingURL=building-blocks.css.map */

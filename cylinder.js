@@ -32,9 +32,8 @@ function Cylinder (config, parentSelector) {
 	container.append(base, base2);
 
 	for (var i = 0; i < numFaces; i++) {
-		var faceSegment = $('<div class="cylinder-segment"></div>'),
-			angle = angleInterval * i;
-		faceSegment.css({
+		var angle = angleInterval * i,
+			faceSegment = $('<div class="cylinder-segment"></div>').css({
 			'width': faceWidth + 1,
 			'height': config.height,
 			'top': config.radius - (config.height / 2),
@@ -46,9 +45,8 @@ function Cylinder (config, parentSelector) {
 
 	if (config.thickness) {
 		for (var i = 0; i < numFacesInner; i++) {
-			var faceSegment = $('<div class="cylinder-segment inner"></div>'),
-				angle = angleIntervalInner * i;
-			faceSegment.css({
+			var angle = angleIntervalInner * i,
+				faceSegment = $('<div class="cylinder-segment inner"></div>').css({
 				'width': faceWidthInner + 1,
 				'height': config.height,
 				'top': config.radius - (config.height / 2),
@@ -58,6 +56,6 @@ function Cylinder (config, parentSelector) {
 			container.append(faceSegment);
 		};
 	}
-	
+
 	parent.append(container);
 }
