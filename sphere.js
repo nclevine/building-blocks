@@ -34,10 +34,14 @@ function Sphere (config, parentSelector) {
 					'height': ringHeight,
 					'transform': 'translateY(' + yTranslation + 'px) rotateY(' + (Math.PI - horizontalAngle) + 'rad) translateZ(' + ringRadius + 'px) rotateX(' + verticalAngle + 'rad)',
 				});
-				ringSegmentLower = ringSegmentUpper.clone().css({
+			container.append(ringSegmentUpper);
+			if (yTranslation !== 0) {
+				var ringSegmentLower = ringSegmentUpper.clone().css({
 					'transform': 'translateY(' + (-yTranslation) + 'px) rotateY(' + (Math.PI - horizontalAngle) + 'rad) translateZ(' + ringRadius + 'px) rotateX(' + (Math.PI - verticalAngle) + 'rad)',
 				});
-			container.append(ringSegmentUpper, ringSegmentLower);
+				container.append(ringSegmentLower);
+			}
+			// container.append(ringSegmentUpper, ringSegmentLower);
 		};
 
 		yTranslation = yTranslation + (ringHeight * Math.cos(Math.PI - verticalAngle));

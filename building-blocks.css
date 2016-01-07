@@ -29,8 +29,7 @@ html, body, .sandbox {
 
 .sphere-container {
   top: 45%;
-  left: 45%;
-  transform: rotateX(45deg); }
+  left: 45%; }
 
 .sphere-face {
   background-color: rgba(46, 204, 64, 0.3); }
