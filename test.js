@@ -31,4 +31,12 @@ var sphereConfig = {
 	resolution: 1
 };
 
-var sphere = new Sphere(sphereConfig, parentSelector);
+// var sphere = new Sphere(sphereConfig, parentSelector);
+
+var letterConfig = {
+	size: 200,
+	depth: 20,
+	// bold: true
+};
+
+var letterN = new LetterN(letterConfig, parentSelector);
