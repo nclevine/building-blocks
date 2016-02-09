@@ -33,9 +33,9 @@ var sphereConfig = {
 // var sphere = new Sphere(sphereConfig, parentSelector);
 
 var letterConfig = {
-	size: 200,
+	size: 400,
 	depth: 20,
-	// bold: true
+	bold: true
 };
 
 var letterN = new LetterN(letterConfig, parentSelector);

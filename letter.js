@@ -153,10 +153,10 @@ function LetterA (config, parentSelector) {
 		}),
 		crossBarEdge = crossBar.clone().addClass('edge').css({
 			'height': config.depth,
-			'top': 'calc(50% - ' + (weight / 2 - config.depth / 2) + 'px)',
+			'top': 'calc(50% - ' + (config.depth / 2) + 'px)',
 			'transform': 'rotateX(90deg)'
 		}),
-		crossBarEdge2 = crossBarEdge.clone().css('top', 'calc(50% + ' + (weight / 2 + config.depth / 2) + 'px)'),
+		crossBarEdge2 = crossBarEdge.clone().css('top', 'calc(50% + ' + (weight - config.depth / 2) + 'px)'),
 		foot = $('<div class="foot edge"></div>').css({
 			'width': weight,
 			'height': config.depth,
@@ -170,10 +170,10 @@ function LetterA (config, parentSelector) {
 			'transform-origin': 'left bottom'
 		}),
 		foot3 = $('<div class="foot edge"></div>').css({
-			'width': weight + 1,
+			'width': weight * 1.16,
 			'height': config.depth,
 			'top': config.depth / -2,
-			'left': 'calc(50% - ' + ((weight + 1) / 2) + 'px)',
+			'left': 'calc(50% - ' + ((weight * 1.16) / 2) + 'px)',
 			'transform': 'rotateX(90deg)'
 		});
 
