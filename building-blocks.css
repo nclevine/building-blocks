@@ -31,19 +31,26 @@ html, body, .sandbox {
   top: 45%;
   left: 45%; }
 
-.letter-container {
+.letter-container .glyph {
+  overflow: hidden; }
+  .letter-container .glyph div {
+    background-color: #0074D9; }
+  .letter-container .glyph:nth-of-type(2) div {
+    background-color: #FF4136; }
+.letter-container .edge {
+  background-color: #FFDC00; }
+
+.letter-n {
   top: 5%;
   left: 5%;
   transform: rotateY(45deg) rotateX(15deg);
   animation: letterSpin 4s infinite; }
-  .letter-container .glyph {
-    overflow: hidden; }
-    .letter-container .glyph div {
-      background-color: #0074D9; }
-    .letter-container .glyph:nth-of-type(2) div {
-      background-color: #FF4136; }
-  .letter-container .edge {
-    background-color: #FFDC00; }
+
+.letter-a {
+  top: 5%;
+  left: 35%;
+  transform: rotateY(45deg) rotateX(15deg) rotateZ(0deg);
+  animation: letterSpinTwo 4s infinite; }
 
 .sphere-face {
   background-color: rgba(46, 204, 64, 0.3); }
@@ -118,5 +125,12 @@ html, body, .sandbox {
     transform: rotateY(45deg) rotateX(195deg); }
   100% {
     transform: rotateY(225deg) rotateX(165deg); } }
+@keyframes letterSpinTwo {
+  0% {
+    transform: rotateY(45deg) rotateX(15deg) rotateZ(0deg); }
+  50% {
+    transform: rotateY(45deg) rotateX(195deg) rotateZ(0deg); }
+  100% {
+    transform: rotateY(225deg) rotateX(165deg) rotateZ(180deg); } }
 
 /*# sourceMappingURL=building-blocks.css.map */

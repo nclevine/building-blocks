@@ -40,10 +40,6 @@ html, body, .sandbox {
 	// transform: rotateX(45deg);
 }
 .letter-container {
-	top: 5%;
-	left: 5%;
-	transform: rotateY(45deg) rotateX(15deg);
-	animation: letterSpin 4s infinite;
 
 	.glyph {
 		overflow: hidden;
@@ -62,6 +58,19 @@ html, body, .sandbox {
 	.edge {
 		background-color: $yellow;
 	}
+}
+.letter-n {
+	top: 5%;
+	left: 5%;
+	transform: rotateY(45deg) rotateX(15deg);
+	animation: letterSpin 4s infinite;
+}
+.letter-a {
+	top: 5%;
+	left: 35%;
+	transform: rotateY(45deg) rotateX(15deg) rotateZ(0deg);
+	animation: letterSpinTwo 4s infinite;
+	// transform: rotateY(45deg) rotateX(-15deg);
 }
 .face {
 	// border: 1px solid rgba(0,255,0,1);
@@ -144,4 +153,9 @@ html, body, .sandbox {
 	0% { transform: rotateY(45deg) rotateX(15deg) }
 	50% { transform: rotateY(45deg) rotateX(195deg) }
 	100% { transform: rotateY(225deg) rotateX(165deg) }
+}
+@keyframes letterSpinTwo {
+	0% { transform: rotateY(45deg) rotateX(15deg) rotateZ(0deg) }
+	50% { transform: rotateY(45deg) rotateX(195deg) rotateZ(0deg) }
+	100% { transform: rotateY(225deg) rotateX(165deg) rotateZ(180deg) }
 }

@@ -40,3 +40,4 @@ var letterConfig = {
 };
 
 var letterN = new LetterN(letterConfig, parentSelector);
+var letterA = new LetterA(letterConfig, parentSelector);
