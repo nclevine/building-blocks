@@ -40,6 +40,7 @@ html, body, .sandbox {
 	// transform: rotateX(45deg);
 }
 .letter-container {
+	top: 5%;
 
 	.glyph {
 		overflow: hidden;
@@ -60,17 +61,44 @@ html, body, .sandbox {
 	}
 }
 .letter-n {
-	top: 5%;
 	left: 5%;
 	transform: rotateY(45deg) rotateX(15deg);
 	animation: letterSpin 4s infinite;
 }
+.letter-o {
+	left: 25%;
+	transform: rotateY(45deg) rotateX(15deg);
+	animation: letterSpin 4s infinite;
+
+	.cylinder-container {
+		top: 0;
+		left: 0;
+		animation: none;
+		
+		.cylinder-segment {
+			background-color: $yellow;
+		}
+
+		.cylinder-base {
+			border-color: $blue;
+
+			&:nth-of-type(2) {
+				border-color: $red;
+			}
+		}
+	}
+
+}
 .letter-a {
-	top: 5%;
-	left: 35%;
+	left: 45%;
 	transform: rotateY(45deg) rotateX(15deg) rotateZ(0deg);
 	animation: letterSpinTwo 4s infinite;
 	// transform: rotateY(45deg) rotateX(-15deg);
+}
+.letter-h {
+	left: 65%;
+	transform: rotateY(45deg) rotateX(15deg);
+	animation: letterSpin 4s infinite;
 }
 .face {
 	// border: 1px solid rgba(0,255,0,1);

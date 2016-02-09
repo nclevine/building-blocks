@@ -31,26 +31,46 @@ html, body, .sandbox {
   top: 45%;
   left: 45%; }
 
-.letter-container .glyph {
-  overflow: hidden; }
-  .letter-container .glyph div {
-    background-color: #0074D9; }
-  .letter-container .glyph:nth-of-type(2) div {
-    background-color: #FF4136; }
-.letter-container .edge {
-  background-color: #FFDC00; }
+.letter-container {
+  top: 5%; }
+  .letter-container .glyph {
+    overflow: hidden; }
+    .letter-container .glyph div {
+      background-color: #0074D9; }
+    .letter-container .glyph:nth-of-type(2) div {
+      background-color: #FF4136; }
+  .letter-container .edge {
+    background-color: #FFDC00; }
 
 .letter-n {
-  top: 5%;
   left: 5%;
   transform: rotateY(45deg) rotateX(15deg);
   animation: letterSpin 4s infinite; }
 
+.letter-o {
+  left: 25%;
+  transform: rotateY(45deg) rotateX(15deg);
+  animation: letterSpin 4s infinite; }
+  .letter-o .cylinder-container {
+    top: 0;
+    left: 0;
+    animation: none; }
+    .letter-o .cylinder-container .cylinder-segment {
+      background-color: #FFDC00; }
+    .letter-o .cylinder-container .cylinder-base {
+      border-color: #0074D9; }
+      .letter-o .cylinder-container .cylinder-base:nth-of-type(2) {
+        border-color: #FF4136; }
+
 .letter-a {
-  top: 5%;
-  left: 35%;
+  left: 45%;
   transform: rotateY(45deg) rotateX(15deg) rotateZ(0deg);
   animation: letterSpinTwo 4s infinite; }
+
+.letter-h {
+  left: 65%;
+  transform: rotateY(45deg) rotateX(15deg);
+  animation: letterSpin 4s infinite; }
 
 .sphere-face {
   background-color: rgba(46, 204, 64, 0.3); }

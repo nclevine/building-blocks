@@ -4,7 +4,6 @@ var boxConfig = {
 	width: 250,
 	height: 200,
 	depth: 150,
-	color: 'rgba(40,200,200,0.3)'
 };
 
 // var box = new Box(boxConfig, parentSelector);
@@ -40,4 +39,6 @@ var letterConfig = {
 };
 
 var letterN = new LetterN(letterConfig, parentSelector);
+var letterO = new LetterO(letterConfig, parentSelector);
 var letterA = new LetterA(letterConfig, parentSelector);
+var letterH = new LetterH(letterConfig, parentSelector);

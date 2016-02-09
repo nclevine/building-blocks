@@ -1,8 +1,12 @@
 /*
-	sampleConfig: {
-		radius: 300,
-		resolution: 5
-	}
+
+sample config:
+
+sphereConfig: {
+	radius: 300,
+	resolution: 5	// determines number of panels used
+};
+
 */
 
 function Sphere (config, parentSelector) {

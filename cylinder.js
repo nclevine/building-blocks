@@ -1,3 +1,17 @@
+/*
+
+sample config:
+
+var cylConfig = {
+	radius: 200,
+	height: 50,
+	resolution: 1,	// this determines how many panels make the curved side
+	thickness: 30,	// this will make the cylinder a ring,
+	isLetter: true 	// this is used only when instantiating a LetterN and converts the styling accordingly
+};
+
+*/
+
 function Cylinder (config, parentSelector) {
 
 	var parent = $(parentSelector);
@@ -57,5 +71,16 @@ function Cylinder (config, parentSelector) {
 		};
 	}
 
-	parent.append(container);
+	if (config.isLetter) {
+		var letterContainer = $('<div class="letter-container letter-o"></div>').css({
+			'width': config.radius * 2,
+			'height': config.radius * 2
+		});
+		container.css('transform', 'rotateX(-90deg)');
+		letterContainer.append(container);
+		parent.append(letterContainer);
+	} else {
+		parent.append(container);
+	}
+
 }

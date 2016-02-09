@@ -1,3 +1,15 @@
+/*
+
+sample config:
+
+var pyrConfig = {
+	width: 275,
+	height: 400,
+	depth: 325
+};
+
+*/
+
 function Pyramid (config, parentSelector) {
 
 	var parent = $(parentSelector);

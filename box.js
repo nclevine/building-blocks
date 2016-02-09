@@ -1,3 +1,15 @@
+/*
+
+sample config:
+
+var boxConfig = {
+	width: 250,
+	height: 200,
+	depth: 150,
+};
+
+*/
+
 function Box (config, parentSelector) {
 
 	var parent = $(parentSelector);
