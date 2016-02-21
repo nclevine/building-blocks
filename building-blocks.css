@@ -5,87 +5,25 @@
   position: absolute;
   transform-style: preserve-3d; }
 
-html, body, .sandbox {
+html, body {
   width: 100%;
   height: 100%; }
 
-.box-container {
-  top: 60%;
-  left: 60%;
-  transform: rotateY(45deg) rotateX(15deg);
-  animation: boxSpin 3s infinite; }
+body {
+  background-color: black; }
 
-.pyramid-container {
-  top: 30%;
-  left: 15%;
-  transform: rotateY(30deg) rotateX(15deg);
-  animation: pyramidSpin 3s infinite; }
+.letter-container .glyph {
+  overflow: hidden; }
 
-.cylinder-container {
-  top: 20%;
-  left: 70%;
-  transform: rotateY(40deg) rotateX(15deg);
-  animation: cylinderSpin 3s infinite; }
-
-.sphere-container {
-  top: 45%;
-  left: 45%; }
-
-.letter-container {
-  top: 5%; }
-  .letter-container .glyph {
-    overflow: hidden; }
-    .letter-container .glyph div {
-      background-color: #0074D9; }
-    .letter-container .glyph:nth-of-type(2) div {
-      background-color: #FF4136; }
-  .letter-container .edge {
-    background-color: #FFDC00; }
-
-.letter-n {
-  left: 5%;
-  transform: rotateY(45deg) rotateX(15deg);
-  animation: letterSpin 4s infinite; }
-
-.letter-o {
-  left: 25%;
-  transform: rotateY(45deg) rotateX(15deg);
-  animation: letterSpin 4s infinite; }
-  .letter-o .cylinder-container {
-    top: 0;
-    left: 0;
-    animation: none; }
-    .letter-o .cylinder-container .cylinder-segment {
-      background-color: #FFDC00; }
-    .letter-o .cylinder-container .cylinder-base {
-      border-color: #0074D9; }
-      .letter-o .cylinder-container .cylinder-base:nth-of-type(2) {
-        border-color: #FF4136; }
-
-.letter-a {
-  left: 45%;
-  transform: rotateY(45deg) rotateX(15deg) rotateZ(0deg);
-  animation: letterSpinTwo 4s infinite; }
-
-.letter-h {
-  left: 65%;
-  transform: rotateY(45deg) rotateX(15deg);
-  animation: letterSpin 4s infinite; }
-
-.sphere-face {
-  background-color: rgba(46, 204, 64, 0.3); }
+.letter-o .cylinder-container {
+  top: 0;
+  left: 0;
+  animation: none; }
 
 .cylinder-base {
-  background-color: #0074D9;
-  border-color: #0074D9;
   border-radius: 50%; }
   .cylinder-base.ring {
     background-color: transparent; }
-
-.cylinder-segment {
-  background-color: #FF4136; }
-  .cylinder-segment.inner {
-    background-color: #FFDC00; }
 
 .triangle {
   width: 0;
@@ -93,31 +31,11 @@ html, body, .sandbox {
   border-style: solid;
   transform-origin: center bottom; }
 
-.x-face {
-  background-color: #FF4136; }
-  .x-face.triangle {
-    background-color: transparent;
-    border-color: transparent transparent #FF4136 transparent; }
+.x-face.triangle {
+  background-color: transparent; }
 
-.y-face {
-  background-color: #0074D9; }
-
-.z-face {
-  background-color: #FFDC00; }
-  .z-face.triangle {
-    background-color: transparent;
-    border-color: transparent transparent #FFDC00 transparent; }
-
-.test {
-  perspective: 500px;
-  top: 70%;
-  left: 70%; }
-
-.test-inner {
-  width: 200px;
-  border-style: solid;
-  border-color: transparent transparent #2ECC40 transparent;
-  border-width: 0 50px 100px 50px; }
+.z-face.triangle {
+  background-color: transparent; }
 
 @keyframes spin {
   100% {
